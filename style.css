@@ -1,0 +1,184 @@
+
+:root{
+    --val : #000000;
+    --navbar-color : #242424;
+    --navbar-btn-color : #885a5a;
+    --navbar-text-color : rgb(240, 217, 174);
+    --color-IUT-1 : #9d9fa2;
+    --color-IUT-2 : #B60008;
+    --color-IUT-3 : #242424;
+    --color-IUT-4 : #46403A;
+    --color-IUT-5 : #fdfdfd;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container{
+    position: fixed;
+    top: 100px;
+    left: 0;
+    transform: translate(-300px);
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: var(--color-IUT-3);
+    color: var(--color-IUT-5);
+    transition: 0.6s ease-in-out;
+    z-index: 1000;
+}
+
+.logo-iut{
+    width: 150px;
+    height: 100px;
+}
+
+.navbar-ul{
+    padding-left: 1.4rem;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 92vh;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.navbar-li{
+    border-top: 2px solid;
+    border-bottom: 1px solid;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    transition: 0.2s ease-in-out;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    background-color: var(--color-IUT-3);
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.navbar-btn{
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 30px;
+    display: flex;
+    background-color: var(--color-IUT-3);
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    transition: 0.2s ease-in-out;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.navbtn-bar{
+    width: 25px;
+    background-color: var(--color-IUT-1);
+    height: 4px;
+    
+}
+
+.navbar-btn:hover{
+    background-color: var(--color-IUT-5);
+}
+
+.navbtn:hover{
+    background-color: var(--color-IUT-5);
+}
+
+.first-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content{
+    margin-top: 110px;
+    display: flex;
+    width: 100%;
+    background: var(--color-IUT-4);
+}
+
+.main-text{
+    display: flex;
+    flex-direction: column;
+    font-size: 35px;
+    align-items: center;
+    color: var(--color-IUT-5);
+    width: 100%;
+}
+
+.main-h2{
+    font-size: 45px;
+}
+
+.img-pres{
+    overflow: hidden;
+    width: 100%;
+    background-color: var(--color-IUT-1);
+
+
+}
+
+figure{
+    margin: 0;
+    overflow: hidden;
+    width: 500%;
+    display: flex;
+    animation: 20s animation_slide infinite; 
+}
+        
+figure img{
+    pointer-events: none;
+    object-fit: cover;
+    width: 20%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+/* css pour l'animation du menu défilant à gauche*/   
+@keyframes animation_slide {
+    
+0% {transform:translatex(0)}
+    
+20%{transform:translatex(0)}
+
+25%{transform:translatex(-20%)}
+    
+45%{transform:translatex(-20%)}
+
+50%{transform:translatex(-40%)}
+    
+70%{transform:translatex(-40%)}
+
+75%{transform:translatex(-60%)}
+    
+95%{transform:translatex(-60%)}
+
+100%{transform:translatex(-80%)}
+    
+}	
+
+.navbar-li:hover{
+    background-color: var(--color-IUT-2);
+    color: var(--color-IUT-1);
+}
